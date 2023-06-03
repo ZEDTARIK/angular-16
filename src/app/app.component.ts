@@ -12,10 +12,16 @@ export class AppComponent implements OnInit {
   prix2: number = 150000;
   prix3: number = 9;
 
+  message: string = '';
+
   constructor() {}
 
   ngOnInit(): void {
     // activer lors de l'intialison de componenement
     console.log('Içi ngOnInit');
+  }
+
+  onAfficheMsg(arg: string) {
+      return this.message = 'Vous avez voté pour : ' + arg;
   }
 }

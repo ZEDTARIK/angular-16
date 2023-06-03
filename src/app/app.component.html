@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Formation Angular</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -16,19 +17,24 @@
 </nav>
 
 <!-- Content-->
-<div id="home" class="container">
-  <app-article [titreArticle]= " 'Velo' " [prixArticle]= "prix1"></app-article>
-  <app-article [titreArticle]= " 'Voiture BMW' " [prixArticle]= "prix2"></app-article>
-  <app-article [titreArticle]= " 'Joué' " [prixArticle]= "prix3"></app-article>
+<div class="container">
+  <div id="alertMsg">
+    <p> {{ message }} </p>
+  </div>
+
+  <div id="home">
+    <app-article [titreArticle]=" 'Velo' " [prixArticle]="prix1" (info)="onAfficheMsg($event)"></app-article>
+    <app-article [titreArticle]=" 'Voiture BMW' " [prixArticle]="prix2" (info)="onAfficheMsg($event)"></app-article>
+    <app-article [titreArticle]=" 'Joué' " [prixArticle]="prix3" (info)="onAfficheMsg($event)"></app-article>
+  </div>
+
 </div>
 
-  <!-- footer-->
-  <footer class="py-2 bg-danger">
-    <div class="container">
-      <p class="m-0 text-center text-white">
-        All rights reserved . Copyright  &copy; Zouhair ETTARAK
-      </p>
-    </div>
-  </footer>
-
-
+<!-- footer-->
+<footer class="py-2 bg-danger">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      All rights reserved . Copyright &copy; Zouhair ETTARAK
+    </p>
+  </div>
+</footer>

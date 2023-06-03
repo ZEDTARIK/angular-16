@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -7,15 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
- // titreArticle: string = "Titre de l'article";
+  // titreArticle: string = "Titre de l'article";
   // prixArticle: number = 250.99;
+
   altImg: string = "Alternative Titre de l'article";
   urlImg: string = "https://placehold.co/200x100";
   totalNbrLike: number = 0;
   comment: string = "mon commentaire";
 
+  // Pass data from Parent to childre using Input
   @Input() titreArticle: string;
   @Input() prixArticle: number;
+
+  // Pass data from Children to Parent using Output  + emet
+  @Output() info = new EventEmitter<string>();
 
   constructor() {}
 
@@ -23,5 +28,6 @@ export class ArticleComponent implements OnInit {
 
   onLike() {
     this.totalNbrLike++;  // increment the total number like
+    this.info.emit(this.titreArticle);
   }
 }
