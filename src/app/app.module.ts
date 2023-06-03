@@ -7,11 +7,15 @@ import { ArticleComponent } from './article/article.component';
 
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
+import { ListArticleComponent } from './list-article/list-article.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    ListArticleComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

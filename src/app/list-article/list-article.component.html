@@ -1,0 +1,17 @@
+<div class="container">
+  <div id="alertMsg">
+    <p> {{ message }} </p>
+  </div>
+
+  <div id="home">
+    <app-article
+      *ngFor="let item of articles" :key="item.id"
+        [titreArticle]="item.titreArticle"
+        [prixArticle]="item.prixArticle"
+        [altImg]="item.altImg"
+        [urlImg]="item.urlImg"
+        [dispo]="item.dispo"
+        (info)="onAfficheMsg($event)">
+    </app-article>
+  </div>
+</div>
