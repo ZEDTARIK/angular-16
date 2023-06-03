@@ -36,4 +36,8 @@ export class ArticleComponent implements OnInit {
     this.totalNbrLike++;  // increment the total number like
     this.info.emit(this.titreArticle);
   }
+
+  getColor() {
+    return this.dispo ? "green" : "red";
+  }
 }

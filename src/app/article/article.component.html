@@ -1,7 +1,7 @@
 <div class="card articleInfo">
   <img [src]="urlImg" [alt]="altImg" />
   <div class="card-body">
-    <h6 class="card-title">
+    <h6 class="card-title" [ngStyle]="{ color: getColor() }">
       {{ titreArticle }}
       <span *ngIf="!dispo"> - Indisponible </span>
       <!--<span *ngIf="dispo === false"> - Indisponible </span> -->
@@ -16,6 +16,6 @@
     </div>
   </div>
   <div class="card-footer">
-    <button type="button" class="btn btn-danger btn-sm" (click)="onLike()">J'aime</button>
+    <button [disabled]="!dispo" type="button" class="btn btn-danger btn-sm" (click)="onLike()">J'aime</button>
   </div>
 </div>
