@@ -10,6 +10,7 @@ import { DataService } from './services/data.service';
 import { ListArticleComponent } from './list-article/list-article.component';
 import { AboutComponent } from './about/about.component';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailArticleComponent } from './detail-article/detail-article.componen
     ArticleComponent,
     ListArticleComponent,
     AboutComponent,
-    DetailArticleComponent
+    DetailArticleComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
