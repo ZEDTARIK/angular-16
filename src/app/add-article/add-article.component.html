@@ -1,0 +1,32 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col-md-12">
+
+     <div class="card">
+      <div class="card-header">Ajouter un nouveau article</div>
+      <div class="card-body">
+
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+
+          <div class="mb-3">
+            <label for="titreArticle" class="form-label">Titre Article</label>
+            <input type="text" class="form-control" id="titreArticle" [formControl]="titre">
+          </div>
+          <div class="mb-3">
+            <label for="prix" class="form-label">Prix</label>
+            <input type="number" class="form-control" id="prix" [formControl]="prix">
+          </div>
+
+          <button type="submit" class="btn btn-success btn-sm">Ajouter</button>
+
+        </form>
+      </div>
+     </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>

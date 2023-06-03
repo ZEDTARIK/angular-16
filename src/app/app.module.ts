@@ -5,12 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { DataService } from './services/data.service';
 import { ListArticleComponent } from './list-article/list-article.component';
 import { AboutComponent } from './about/about.component';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddArticleComponent } from './add-article/add-article.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ListArticleComponent,
     AboutComponent,
     DetailArticleComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [DataService], // injection the Services
   bootstrap: [AppComponent]
