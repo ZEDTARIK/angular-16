@@ -14,6 +14,11 @@ export class AppComponent implements OnInit {
 
   message: string = '';
 
+  articles = [
+    {id: 1, titreArticle: "Velo", prixArticle: 250, altImg: "", urlImg: "https://placehold.co/400x250", dispo: true},
+    {id: 1, titreArticle: "Voiture", prixArticle: 150000, altImg: "", urlImg: "https://placehold.co/400x250", dispo: true},
+    {id: 1, titreArticle: "TV", prixArticle: 3500, altImg: "", urlImg: "https://placehold.co/400x250", dispo: true},
+  ] ;
   constructor() {}
 
   ngOnInit(): void {

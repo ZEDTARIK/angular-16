@@ -23,15 +23,20 @@
   </div>
 
   <div id="home">
-    <app-article [titreArticle]=" 'Velo' " [prixArticle]="prix1" (info)="onAfficheMsg($event)"></app-article>
-    <app-article [titreArticle]=" 'Voiture BMW' " [prixArticle]="prix2" (info)="onAfficheMsg($event)"></app-article>
-    <app-article [titreArticle]=" 'Joué' " [prixArticle]="prix3" (info)="onAfficheMsg($event)"></app-article>
+    <app-article
+      *ngFor="let item of articles" :key="item.id"
+        [titreArticle]="item.titreArticle"
+        [prixArticle]="item.prixArticle"
+        [altImg]="item.altImg"
+        [urlImg]="item.urlImg"
+        [dispo]="item.dispo"
+        (info)="onAfficheMsg($event)">
+    </app-article>
   </div>
-
 </div>
 
 <!-- footer-->
-<footer class="py-2 bg-danger">
+<footer class="py-4 bg-danger">
   <div class="container">
     <p class="m-0 text-center text-white">
       All rights reserved . Copyright &copy; Zouhair ETTARAK

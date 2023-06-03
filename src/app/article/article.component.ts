@@ -9,16 +9,21 @@ export class ArticleComponent implements OnInit {
 
   // titreArticle: string = "Titre de l'article";
   // prixArticle: number = 250.99;
+  //altImg: string = "Alternative Titre de l'article";
+  //urlImg: string = "https://placehold.co/200x100";
 
-  altImg: string = "Alternative Titre de l'article";
-  urlImg: string = "https://placehold.co/200x100";
   totalNbrLike: number = 0;
   comment: string = "mon commentaire";
-  dispo: boolean = true;
+
+  //dispo: boolean = true;
 
   // Pass data from Parent to childre using Input
   @Input() titreArticle: string;
   @Input() prixArticle: number;
+  @Input() altImg: string;
+  @Input() urlImg: string;
+  @Input() dispo: boolean;
+
 
   // Pass data from Children to Parent using Output  + emet
   @Output() info = new EventEmitter<string>();
