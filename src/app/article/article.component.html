@@ -16,6 +16,19 @@
     </div>
   </div>
   <div class="card-footer">
-    <button [disabled]="!dispo" type="button" class="btn btn-danger btn-sm" (click)="onLike()">J'aime</button>
+    <button  type="button" class="btn btn-info btn-sm"
+      (click)="onLike()"
+      [ngClass] = "{
+        'show': jaime === true,
+        'hidden': jaime === false }"
+    > Like</button>
+    <button  type="button" class="btn btn-danger btn-sm"
+
+    (click)="onLike()"
+      [ngClass] = "{
+        'show': jaime === false,
+        'hidden': jaime === true }"
+    >DisLike</button>
+
   </div>
 </div>

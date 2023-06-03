@@ -14,6 +14,7 @@ export class ArticleComponent implements OnInit {
 
   totalNbrLike: number = 0;
   comment: string = "mon commentaire";
+  jaime: boolean = true;
 
   //dispo: boolean = true;
 
@@ -33,8 +34,15 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void {}
 
   onLike() {
-    this.totalNbrLike++;  // increment the total number like
-    this.info.emit(this.titreArticle);
+    if(this.jaime === true) {
+      this.totalNbrLike++;  // increment the total number like
+      this.info.emit(this.titreArticle);
+      this.jaime = false;
+    } else {
+      this.totalNbrLike--;  // increment the total number like
+      this.info.emit(this.titreArticle);
+      this.jaime = true;
+    }
   }
 
   getColor() {
