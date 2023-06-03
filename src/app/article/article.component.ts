@@ -14,6 +14,7 @@ export class ArticleComponent implements OnInit {
   urlImg: string = "https://placehold.co/200x100";
   totalNbrLike: number = 0;
   comment: string = "mon commentaire";
+  dispo: boolean = true;
 
   // Pass data from Parent to childre using Input
   @Input() titreArticle: string;
