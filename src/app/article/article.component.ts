@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css'],
 })
 export class ArticleComponent implements OnInit {
+
   titreArticle: string = "Titre de l'article";
   prixArticle: number = 250.99;
   altImg: string = "Alternative Titre de l'article";
-  urlImg: string = "https://placehold.co/300x250";
+  urlImg: string = "https://placehold.co/200x100";
+  totalNbrLike: number = 0;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onLike() {
+    this.totalNbrLike++;  // increment the total number like
+  }
 }
