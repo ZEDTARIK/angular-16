@@ -12,7 +12,7 @@ export class ArticleComponent implements OnInit {
   altImg: string = "Alternative Titre de l'article";
   urlImg: string = "https://placehold.co/200x100";
   totalNbrLike: number = 0;
-
+  comment: string = "mon commentaire";
   constructor() {}
 
   ngOnInit(): void {}

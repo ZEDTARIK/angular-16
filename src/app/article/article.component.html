@@ -1,15 +1,17 @@
 <div class="card articleInfo">
   <img [src]="urlImg" [alt]="altImg" />
   <div class="card-body">
-    <h5 class="card-title"> {{ titreArticle }}</h5>
-    <h4 class="card-title">{{ prixArticle }} $</h4>
-    <p class="card-text">
-        Une Description
-    </p>
-    <p>Nombre de Like : {{ totalNbrLike }} </p>
+    <h6 class="card-title"> {{ titreArticle }}</h6>
+    <h5 class="card-title">{{ prixArticle }} $</h5>
+    <div class="card-text">
+      Nombre de Like : {{ totalNbrLike }}
+
+      <input type="text" class="form-control" placeholder="Commentaire" [(ngModel)]="comment" />
+      Mon Commentaire içi :  {{ comment }}
+
+    </div>
   </div>
   <div class="card-footer">
     <button type="button" class="btn btn-danger btn-sm" (click)="onLike()">J'aime</button>
-
   </div>
 </div>
