@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
 import { ListArticleComponent } from './list-article/list-article.component';
 import { AboutComponent } from './about/about.component';
+import { DetailArticleComponent } from './detail-article/detail-article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     ListArticleComponent,
-    AboutComponent
+    AboutComponent,
+    DetailArticleComponent
   ],
   imports: [
     BrowserModule,
